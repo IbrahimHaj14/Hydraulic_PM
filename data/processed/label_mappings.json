@@ -1,0 +1,161 @@
+{
+  "label_maps": {
+    "cooler": {
+      "3": "near failure",
+      "20": "reduced efficiency",
+      "100": "full efficiency"
+    },
+    "valve": {
+      "73": "near failure",
+      "80": "severe lag",
+      "90": "small lag",
+      "100": "optimal"
+    },
+    "pump": {
+      "0": "no leakage",
+      "1": "weak leakage",
+      "2": "severe leakage"
+    },
+    "accumulator": {
+      "90": "near failure",
+      "100": "severely reduced",
+      "115": "slightly reduced",
+      "130": "optimal"
+    }
+  },
+  "label_encodings": {
+    "cooler": {
+      "3": 0,
+      "20": 1,
+      "100": 2
+    },
+    "valve": {
+      "73": 0,
+      "80": 1,
+      "90": 2,
+      "100": 3
+    },
+    "pump": {
+      "0": 0,
+      "1": 1,
+      "2": 2
+    },
+    "accumulator": {
+      "90": 0,
+      "100": 1,
+      "115": 2,
+      "130": 3
+    }
+  },
+  "label_decodings": {
+    "cooler": {
+      "0": "near failure",
+      "1": "reduced efficiency",
+      "2": "full efficiency"
+    },
+    "valve": {
+      "0": "near failure",
+      "1": "severe lag",
+      "2": "small lag",
+      "3": "optimal"
+    },
+    "pump": {
+      "0": "no leakage",
+      "1": "weak leakage",
+      "2": "severe leakage"
+    },
+    "accumulator": {
+      "0": "near failure",
+      "1": "severely reduced",
+      "2": "slightly reduced",
+      "3": "optimal"
+    }
+  },
+  "sensor_meta": {
+    "PS1": {
+      "unit": "bar",
+      "hz": 100,
+      "type": "pressure"
+    },
+    "PS2": {
+      "unit": "bar",
+      "hz": 100,
+      "type": "pressure"
+    },
+    "PS3": {
+      "unit": "bar",
+      "hz": 100,
+      "type": "pressure"
+    },
+    "PS4": {
+      "unit": "bar",
+      "hz": 100,
+      "type": "pressure"
+    },
+    "PS5": {
+      "unit": "bar",
+      "hz": 100,
+      "type": "pressure"
+    },
+    "PS6": {
+      "unit": "bar",
+      "hz": 100,
+      "type": "pressure"
+    },
+    "EPS1": {
+      "unit": "W",
+      "hz": 100,
+      "type": "motor_power"
+    },
+    "FS1": {
+      "unit": "l/min",
+      "hz": 10,
+      "type": "flow"
+    },
+    "FS2": {
+      "unit": "l/min",
+      "hz": 10,
+      "type": "flow"
+    },
+    "TS1": {
+      "unit": "\u00b0C",
+      "hz": 1,
+      "type": "temperature"
+    },
+    "TS2": {
+      "unit": "\u00b0C",
+      "hz": 1,
+      "type": "temperature"
+    },
+    "TS3": {
+      "unit": "\u00b0C",
+      "hz": 1,
+      "type": "temperature"
+    },
+    "TS4": {
+      "unit": "\u00b0C",
+      "hz": 1,
+      "type": "temperature"
+    },
+    "VS1": {
+      "unit": "mm/s",
+      "hz": 1,
+      "type": "vibration"
+    },
+    "CE": {
+      "unit": "%",
+      "hz": 1,
+      "type": "cooling_efficiency"
+    },
+    "CP": {
+      "unit": "kW",
+      "hz": 1,
+      "type": "cooling_power"
+    },
+    "SE": {
+      "unit": "%",
+      "hz": 1,
+      "type": "efficiency"
+    }
+  }
+}
