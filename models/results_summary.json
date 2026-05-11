@@ -1,0 +1,138 @@
+{
+  "train_size": 1159,
+  "test_size": 290,
+  "n_features": 211,
+  "random_state": 42,
+  "models": {
+    "Logistic Regression": {
+      "mean_macro_f1": 0.9722,
+      "per_target": {
+        "cooler": {
+          "accuracy": 0.9966,
+          "macro_f1": 0.9965
+        },
+        "valve": {
+          "accuracy": 0.9828,
+          "macro_f1": 0.9827
+        },
+        "pump": {
+          "accuracy": 0.9897,
+          "macro_f1": 0.9896
+        },
+        "accumulator": {
+          "accuracy": 0.9207,
+          "macro_f1": 0.9199
+        }
+      }
+    },
+    "Random Forest": {
+      "mean_macro_f1": 0.9957,
+      "per_target": {
+        "cooler": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valve": {
+          "accuracy": 0.9966,
+          "macro_f1": 0.9965
+        },
+        "pump": {
+          "accuracy": 0.9966,
+          "macro_f1": 0.9965
+        },
+        "accumulator": {
+          "accuracy": 0.9897,
+          "macro_f1": 0.9897
+        }
+      }
+    },
+    "XGBoost (default)": {
+      "mean_macro_f1": 0.9948,
+      "per_target": {
+        "cooler": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valve": {
+          "accuracy": 0.9966,
+          "macro_f1": 0.9965
+        },
+        "pump": {
+          "accuracy": 0.9966,
+          "macro_f1": 0.9965
+        },
+        "accumulator": {
+          "accuracy": 0.9862,
+          "macro_f1": 0.9862
+        }
+      }
+    },
+    "XGBoost (tuned)": {
+      "mean_macro_f1": 0.9862,
+      "per_target": {
+        "cooler": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "valve": {
+          "accuracy": 0.9966,
+          "macro_f1": 0.9965
+        },
+        "pump": {
+          "accuracy": 0.9931,
+          "macro_f1": 0.9931
+        },
+        "accumulator": {
+          "accuracy": 0.9552,
+          "macro_f1": 0.9553
+        }
+      }
+    }
+  },
+  "cv_results": {
+    "cooler": {
+      "mean": 1.0,
+      "std": 0.0,
+      "folds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "valve": {
+      "mean": 0.9986,
+      "std": 0.0017,
+      "folds": [
+        0.9965,
+        1.0,
+        1.0,
+        1.0,
+        0.9966
+      ]
+    },
+    "pump": {
+      "mean": 0.9916,
+      "std": 0.0061,
+      "folds": [
+        0.9896,
+        0.9896,
+        1.0,
+        0.9965,
+        0.9826
+      ]
+    },
+    "accumulator": {
+      "mean": 0.9745,
+      "std": 0.0108,
+      "folds": [
+        0.9827,
+        0.9759,
+        0.9862,
+        0.9725,
+        0.9552
+      ]
+    }
+  }
+}
