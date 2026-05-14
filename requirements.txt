@@ -21,6 +21,10 @@ plotly>=5.17.0
  
 # Dashboard
 streamlit>=1.28.0
+
+# LLM chat (Engineer Assistant)
+anthropic>=0.40.0
+python-dotenv>=1.0.0
  
 # Notebook
 ipykernel>=6.0.0
