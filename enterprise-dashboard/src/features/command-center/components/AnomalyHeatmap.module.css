@@ -1,0 +1,132 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.liveBadge {
+  margin-left: auto;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--status-critical);
+  letter-spacing: 0.04em;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.noData {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: var(--space-lg) 0;
+}
+
+.matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rowLabel {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.cells {
+  display: flex;
+  flex: 1;
+  gap: 1px;
+}
+
+.cell {
+  flex: 1;
+  height: 16px;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+  cursor: default;
+}
+
+.cell:hover {
+  opacity: 0.8;
+  outline: 1px solid var(--text-muted);
+}
+
+.rowValue {
+  font-size: 0.62rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  width: 32px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.timeAxis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  padding-left: 48px;
+  padding-right: 32px;
+}
+
+.timeArrow {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-color);
+}
+
+.legendLabel {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gradientBar {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0.6),
+    rgba(234, 179, 8, 0.5),
+    rgba(249, 115, 22, 0.5),
+    rgba(239, 68, 68, 0.8)
+  );
+}

@@ -1,0 +1,124 @@
+.container {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.controlsRow {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.select {
+  background-color: var(--bg-panel);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-sans);
+  min-width: 250px;
+  outline: none;
+}
+
+.select:focus {
+  border-color: var(--accent-primary);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btnPrimary {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btnSecondary:hover {
+  background-color: var(--bg-panel);
+}
+
+.btnDanger {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--status-critical);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.btnDanger:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statusIdle {
+  color: var(--text-muted);
+}
+
+.statusRunning {
+  color: var(--status-healthy);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dotIdle {
+  background-color: var(--text-muted);
+}
+
+.dotRunning {
+  background-color: var(--status-healthy);
+  box-shadow: 0 0 8px var(--status-healthy);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}

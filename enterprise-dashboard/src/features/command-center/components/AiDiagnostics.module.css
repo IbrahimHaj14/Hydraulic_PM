@@ -1,0 +1,98 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.analyzingBadge {
+  margin-left: auto;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--status-critical);
+  letter-spacing: 0.04em;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.metric {
+  background: var(--bg-panel);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.metricLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.metricValue {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+.miniBar {
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.miniFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease-out;
+}
+
+.insightBlock {
+  margin-bottom: var(--space-sm);
+}
+
+.insightBlock:last-child {
+  margin-bottom: 0;
+}
+
+.insightLabel {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.insightText {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

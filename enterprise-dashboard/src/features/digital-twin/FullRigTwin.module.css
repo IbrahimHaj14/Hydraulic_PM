@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.schematicCanvas {
+  flex: 1;
+  position: relative;
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* Base lines */
+.lineHorizontal, .lineVertical {
+  position: absolute;
+  background: var(--border-color);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.lineHorizontal { height: 3px; }
+.lineVertical { width: 3px; }
+
+/* Active lines (Normal Flow) */
+.lineActive {
+  background: linear-gradient(90deg, var(--accent-primary) 0%, rgba(0, 240, 255, 0.2) 100%);
+  background-size: 200% 100%;
+  animation: flowAnim 2s linear infinite;
+}
+
+.lineVertical.lineActive {
+  background: linear-gradient(180deg, var(--accent-primary) 0%, rgba(0, 240, 255, 0.2) 100%);
+  background-size: 100% 200%;
+  animation: flowAnimVert 2s linear infinite;
+}
+
+/* Critical/Cascading Failure lines */
+.lineCritical {
+  background: linear-gradient(90deg, var(--status-critical) 0%, rgba(245, 34, 45, 0.2) 100%);
+  background-size: 200% 100%;
+  animation: flowAnim 1s linear infinite;
+  box-shadow: 0 0 8px var(--status-critical);
+}
+
+.lineVertical.lineCritical {
+  background: linear-gradient(180deg, var(--status-critical) 0%, rgba(245, 34, 45, 0.2) 100%);
+  background-size: 100% 200%;
+  animation: flowAnimVert 1s linear infinite;
+  box-shadow: 0 0 8px var(--status-critical);
+}
+
+@keyframes flowAnim {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes flowAnimVert {
+  0% { background-position: 0 200%; }
+  100% { background-position: 0 -200%; }
+}

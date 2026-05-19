@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Simulation {
+  id        String   @id @default(cuid())
+  name      String
+  startTime DateTime @default(now())
+  endTime   DateTime?
+  status    String   @default("RUNNING") // RUNNING, STOPPED
+  alerts    Alert[]
+  healthLogs ComponentHealth[]
+}
+
+model Alert {
+  id           String   @id @default(cuid())
+  simulationId String
+  simulation   Simulation @relation(fields: [simulationId], references: [id])
+  component    String // Cooler, Valve, Pump, Accumulator, System
+  severity     String // ADVISORY, WARNING, CRITICAL
+  message      String
+  timestamp    DateTime @default(now())
+  acknowledged Boolean  @default(false)
+}
+
+model ComponentHealth {
+  id           String   @id @default(cuid())
+  simulationId String
+  simulation   Simulation @relation(fields: [simulationId], references: [id])
+  coolerHealth Float
+  valveHealth  Float
+  pumpHealth   Float
+  accumulatorHealth Float
+  overallHealth Float
+  timestamp    DateTime @default(now())
+}

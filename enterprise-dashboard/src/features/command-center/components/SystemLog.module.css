@@ -1,0 +1,132 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.count {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+}
+
+.scrollToggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-color);
+  padding: 3px 8px;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.scrollToggle:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.logBody {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.6;
+  min-height: 0;
+}
+
+.logBody::-webkit-scrollbar {
+  width: 4px;
+}
+.logBody::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 2px;
+}
+.logBody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.logEntry {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 3px 6px;
+  border-radius: var(--border-radius-sm);
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.logEntry:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.logEntry.critical {
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.logTimestamp {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  min-width: 65px;
+}
+
+.logSeverity {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+.sevINFO { color: var(--accent-primary); }
+.sevWARN { color: var(--status-warning); }
+.sevCRITICAL { color: var(--status-critical); }
+.sevOK { color: var(--status-healthy); }
+
+.logSource {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+.logMessage {
+  color: var(--text-secondary);
+  white-space: normal;
+  word-break: break-word;
+  flex: 1;
+  min-width: 0;
+}
+
+.logEntry.critical .logMessage {
+  color: var(--status-critical);
+}

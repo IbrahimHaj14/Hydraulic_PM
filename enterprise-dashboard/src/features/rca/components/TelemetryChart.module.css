@@ -1,0 +1,56 @@
+.chartCard {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.chartTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.valueIndicator {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.chartBody {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+/* Custom Tooltip Styling for Recharts */
+.customTooltip {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.tooltipLabel {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-bottom: var(--space-xs);
+}
+
+.tooltipValue {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-family: var(--font-mono);
+}

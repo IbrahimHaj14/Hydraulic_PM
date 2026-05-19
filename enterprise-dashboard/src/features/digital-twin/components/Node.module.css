@@ -1,0 +1,134 @@
+.node {
+  background-color: var(--bg-panel);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 140px;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.iconWrapper {
+  padding: var(--space-sm);
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Status Variants */
+.healthy {
+  border-color: var(--status-healthy);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
+}
+.healthy .iconWrapper {
+  color: var(--status-healthy);
+}
+
+.warning {
+  border-color: var(--status-warning);
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+}
+.warning .iconWrapper {
+  color: var(--status-warning);
+}
+
+.critical {
+  border-color: var(--status-critical);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+  animation: pulse-critical 1.5s infinite;
+}
+.critical .iconWrapper {
+  color: var(--status-critical);
+}
+
+@keyframes pulse-critical {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.telemetryBadge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--accent-primary);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  box-shadow: var(--shadow-sm);
+  z-index: 3;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Enterprise PdM Metrics ── */
+.ahiBar {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.ahiLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+  font-family: var(--font-mono);
+}
+
+.ahiTrack {
+  width: 100%;
+  height: 4px;
+  background: var(--bg-primary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ahiFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.rulBadge {
+  font-size: 0.6rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background: var(--bg-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,40 @@
+.topbar {
+  height: 64px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-xl);
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--border-radius-full, 9999px);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--status-healthy);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--status-healthy);
+}
